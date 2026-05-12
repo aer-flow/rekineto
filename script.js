@@ -202,16 +202,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (confirmBtn) {
-      const baseHref = confirmBtn.getAttribute('href');
       confirmBtn.addEventListener('click', (e) => {
         if (!selectedDate || !selectedTime) {
           e.preventDefault();
-          alert('Te rugăm să alegi data și ora înainte de a confirma.');
+          alert('Te rugăm să alegi data și ora înainte de a continua.');
           return;
         }
         const dateStr = `${selectedDate.getDate()} ${monthNames[selectedDate.getMonth()]} ${selectedDate.getFullYear()}`;
-        const message = `Bună ziua! Vreau să programez o ședință de ${selectedService} pe ${dateStr} la ora ${selectedTime}. Mulțumesc!`;
-        confirmBtn.setAttribute('href', `${baseHref.split('?')[0]}?text=${encodeURIComponent(message)}`);
+        alert(`Programare aleasă: ${selectedService}, ${dateStr}, ora ${selectedTime}.`);
       });
     }
 

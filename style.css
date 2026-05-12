@@ -926,8 +926,12 @@ p { color: var(--ink-soft); line-height: 1.65; }
 }
 
 .booking-confirm {
+  border: 0;
   background: var(--accent);
   color: var(--paper);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
   font-weight: 600;
   padding: var(--space-4) var(--space-6);
   border-radius: var(--r-pill);
