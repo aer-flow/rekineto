@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Profesional Vet",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["/Users/imac24/.npm/_npx/aab42732f01924e5/node_modules/.bin/serve", "-p", "3456", "/Users/imac24/Desktop/websites/Profesional Vet Apahida"],
+      "port": 3456
+    }
+  ]
+}

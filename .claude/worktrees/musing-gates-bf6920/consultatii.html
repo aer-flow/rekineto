@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultații & Profilaxie | Profesional Vet Apahida</title>
+    <meta name="description" content="Profesional Vet Apahida oferă consultații veterinare amănunțite și planuri de profilaxie în Apahida.">
+    <meta property="og:title" content="Consultații & Profilaxie | Profesional Vet Apahida">
+    <meta property="og:description" content="Profesional Vet Apahida oferă consultații veterinare amănunțite și planuri de profilaxie în Apahida.">
+    <meta property="og:url" content="https://rekineto.vercel.app/.claude/worktrees/musing-gates-bf6920/consultatii.html">
+    <meta property="og:image" content="https://rekineto.vercel.app/img/brand-preview.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1.0.28">
+    <link rel="icon" href="img/brand-logo.jpg">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="subpage">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header id="navbar" class="scrolled">
+        <a href="index.html" class="logo">
+            <img src="img/brand-logo.jpg" alt="Logo Profesional Vet Apahida" class="logo-mark" loading="eager" decoding="async">
+            <span class="logo-name">Profesional Vet Apahida</span>
+        </a>
+        <nav class="nav-links" id="mobile-nav">
+            <a href="index.html#servicii">Înapoi la Servicii</a>
+            <a href="tarife.html">Tarife</a>
+            <a href="index.html#programare" class="btn btn-emerald" style="padding: 10px 24px; font-size: 0.95rem;">Programare</a>
+        </nav>
+        <button class="mobile-menu" type="button" aria-label="Deschide meniul" aria-expanded="false" aria-controls="mobile-nav">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <section class="subpage-hero service-subpage-hero" style="--subpage-hero-image: url('https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1600&q=80'); --subpage-hero-position: center 32%;">
+        <div class="container">
+            <div class="hero-content reveal">
+                <span class="badge">Prevenție & Sănătate</span>
+                <h1>Consultații & <br> Profilaxie</h1>
+                <p>Sănătatea începe cu o examinare atentă. Planurile noastre de profilaxie sunt concepute să prevină problemele înainte ca ele să apară.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="bento-grid">
+                <div class="service-card bento-wide reveal">
+                    <div class="service-icon"><i class="fa-solid fa-notes-medical"></i></div>
+                    <h3>Check-up Complet</h3>
+                    <p>O analiză detaliată a fiecărui sistem al organismului, de la starea blănii până la funcțiile interne, pentru o viziune clară asupra sănătății.</p>
+                </div>
+                <div class="service-card bento-tall reveal">
+                    <div class="service-icon"><i class="fa-solid fa-syringe"></i></div>
+                    <h3>Vaccinare & Deparazitare</h3>
+                    <p>Calendare de imunizare personalizate și protocoale de deparazitare adaptate stilului de viață al animalului tău.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-bowl-food"></i></div>
+                    <h3>Nutriție Personalizată</h3>
+                    <p>Consultantul nostru nutrițional te ajută să alegi dieta perfectă pentru vârsta, rasa și nevoile specifice ale prietenului tău.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
+                    <h3>Sănătate Orală</h3>
+                    <p>Evaluări periodice ale dentiției și sfaturi pentru igiena orală acasă, pentru un zâmbet sănătos și fără durere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: var(--primary-light);">
+        <div class="container text-center reveal">
+            <h2>Vrei să stabilim un plan de sănătate?</h2>
+            <p style="margin-bottom: 2rem;">Echipa noastră este pregătită să îți ofere cele mai bune sfaturi preventive.</p>
+            <a href="index.html#programare" class="btn btn-emerald">Programează o Vizită</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="border: none;">
+                <p>&copy; 2026 Profesional Vet Apahida. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=1.0.9"></script>
+    <script>
+        gsap.from(".subpage-hero h1", { y: 50, opacity: 0, duration: 1, ease: "power3.out", delay: 0.3 });
+        gsap.from(".subpage-hero p", { y: 30, opacity: 0, duration: 1, ease: "power3.out", delay: 0.5 });
+    </script>
+</body>
+</html>

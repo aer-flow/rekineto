@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirurgie Veterinară | Profesional Vet Apahida</title>
+    <meta name="description" content="Profesional Vet Apahida oferă chirurgie veterinară de înaltă precizie în Apahida, cu tehnologie avansată și îngrijire post-operatorie atentă.">
+    <meta property="og:title" content="Chirurgie Veterinară | Profesional Vet Apahida">
+    <meta property="og:description" content="Profesional Vet Apahida oferă chirurgie veterinară de înaltă precizie în Apahida, cu tehnologie avansată și îngrijire post-operatorie atentă.">
+    <meta property="og:url" content="https://rekineto.vercel.app/.claude/worktrees/musing-gates-bf6920/service-detail.html">
+    <meta property="og:image" content="https://rekineto.vercel.app/img/brand-preview.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1.0.28">
+    <link rel="icon" href="img/brand-logo.jpg">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="subpage">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header id="navbar" class="scrolled">
+        <a href="index.html" class="logo">
+            <img src="img/brand-logo.jpg" alt="Logo Profesional Vet Apahida" class="logo-mark" loading="eager" decoding="async">
+            <span class="logo-name">Profesional Vet Apahida</span>
+        </a>
+        <nav class="nav-links" id="mobile-nav">
+            <a href="index.html#servicii">Înapoi la Servicii</a>
+            <a href="tarife.html">Tarife</a>
+            <a href="index.html#programare" class="btn btn-emerald" style="padding: 10px 24px; font-size: 0.95rem;">Programare</a>
+        </nav>
+        <button class="mobile-menu" type="button" aria-label="Deschide meniul" aria-expanded="false" aria-controls="mobile-nav">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <section class="subpage-hero service-subpage-hero" style="--subpage-hero-image: url('https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=1600&q=80'); --subpage-hero-position: center 38%;">
+        <div class="container">
+            <div class="hero-content reveal">
+                <span class="badge">Specialitate Elită</span>
+                <h1>Chirurgie Veterinară <br> de Înaltă Precizie</h1>
+                <p>Abordăm fiecare intervenție cu rigoare medicală și compasiune, folosind cele mai sigure protocoale anestezice și tehnologie de ultimă generație.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="bento-grid">
+                <div class="service-card bento-wide reveal">
+                    <div class="service-icon"><i class="fa-solid fa-microscope"></i></div>
+                    <h3>Diagnostic Pre-Operator</h3>
+                    <p>Fiecare pacient beneficiază de analize de sânge complete și screening cardiologic înainte de orice intervenție, pentru a minimiza riscurile la zero.</p>
+                </div>
+                <div class="service-card bento-tall reveal">
+                    <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Monitorizare Constantă</h3>
+                    <p>Tehnologia noastră de monitorizare multiparametru urmărește funcțiile vitale în timp real, asigurând o stabilitate perfectă pe tot parcursul procedurii chirurgicale.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-shield-dog"></i></div>
+                    <h3>Recuperare Blândă</h3>
+                    <p>Post-operator, oferim un mediu cald și liniștit, reducând stresul de trezire și facilitând o recuperare rapidă.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-file-medical"></i></div>
+                    <h3>Transparență Totală</h3>
+                    <p>Primești explicații clare, rapoarte detaliate și pași concreți pentru îngrijirea de după intervenție.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: var(--primary-light);">
+        <div class="container text-center reveal">
+            <h2>Ai nevoie de o opinie expertă?</h2>
+            <p style="margin-bottom: 2rem;">Echipa noastră este pregătită să îți ofere cele mai bune soluții pentru sănătatea animalului tău.</p>
+            <a href="index.html#programare" class="btn btn-emerald">Programează o Consultație</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="border: none;">
+                <p>&copy; 2026 Profesional Vet Apahida. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=1.0.9"></script>
+    <script>
+        gsap.from(".subpage-hero h1", { y: 50, opacity: 0, duration: 1, ease: "power3.out", delay: 0.3 });
+        gsap.from(".subpage-hero p", { y: 30, opacity: 0, duration: 1, ease: "power3.out", delay: 0.5 });
+    </script>
+</body>
+</html>
