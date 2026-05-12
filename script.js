@@ -223,12 +223,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // ====================
   function initShowcaseSections() {
     const services = [
-      { num: '1', icon: 'service-icon-ortho', name: 'Kinetoterapie', italic: 'Ortopedică', copy: 'Recuperare post-operator, fracturi, entorse, luxații. Evaluare biomecanică completă, plan construit pe obiective măsurabile, ședințe 1-on-1 și ajustări săptămânale.', tag: 'Genunchi · Șold · Umăr', stat: '~12 ședințe medii', href: 'kinetoterapie-ortopedica.html' },
-      { num: '2', icon: 'service-icon-neuro', name: 'Kinetoterapie', italic: 'Neurologică', copy: 'Post-AVC, Parkinson, scleroză multiplă, neuropatii. Lucrăm pe mobilitate, echilibru și autonomie, cu progres urmărit săptămânal.', tag: 'Mobilitate · Echilibru', stat: '8+ ani specializare', href: 'kinetoterapie-neurologica.html' },
-      { num: '3', icon: 'service-icon-trauma', name: 'Recuperare', italic: 'Post-Traumatică', copy: 'Programe complete după accidente, create pentru a reconstrui forța, mobilitatea și încrederea în mișcare.', tag: 'Forță · Mobilitate', stat: 'Plan etapizat', href: 'recuperare-post-traumatica.html' },
-      { num: '4', icon: 'service-icon-pediatric', name: 'Kinetoterapie', italic: 'Pediatrică', copy: 'Pentru bebeluși, copii și adolescenți: postură, scolioze, dezvoltare motrică și lucru adaptat vârstei.', tag: 'Vojta · Bobath', stat: '0-18 ani', href: 'kinetoterapie-pediatrica.html' },
-      { num: '5', icon: 'service-icon-sport', name: 'Recuperare', italic: 'Sportivă', copy: 'Programe return-to-play pentru sportivi amatori și profesioniști, cu accent pe prevenția recidivelor.', tag: 'Performanță · Prevenție', stat: 'Return-to-play', href: 'recuperare-sportiva.html' },
-      { num: '6', icon: 'service-icon-pain', name: 'Terapia', italic: 'Durerii Cronice', copy: 'Durere de spate, cervicalgie, hernie de disc și fibromialgie, abordate prin plan progresiv și măsurabil.', tag: 'Abordare integrativă', stat: '16 ședințe medii', href: 'kinetoterapie-durere-cronica.html' }
+      { num: '1', image: 'img/service-1.jpg', imageAlt: 'Kinetoterapie ortopedică', name: 'Kinetoterapie', italic: 'Ortopedică', copy: 'Recuperare post-operator, fracturi, entorse, luxații. Evaluare biomecanică completă, plan construit pe obiective măsurabile, ședințe 1-on-1 și ajustări săptămânale.', tag: 'Genunchi · Șold · Umăr', stat: '~12 ședințe medii', href: 'kinetoterapie-ortopedica.html' },
+      { num: '2', image: 'img/service-2.jpg', imageAlt: 'Kinetoterapie neurologică', name: 'Kinetoterapie', italic: 'Neurologică', copy: 'Post-AVC, Parkinson, scleroză multiplă, neuropatii. Lucrăm pe mobilitate, echilibru și autonomie, cu progres urmărit săptămânal.', tag: 'Mobilitate · Echilibru', stat: '8+ ani specializare', href: 'kinetoterapie-neurologica.html' },
+      { num: '3', image: 'img/service-3.jpg', imageAlt: 'Recuperare post-traumatică', name: 'Recuperare', italic: 'Post-Traumatică', copy: 'Programe complete după accidente, create pentru a reconstrui forța, mobilitatea și încrederea în mișcare.', tag: 'Forță · Mobilitate', stat: 'Plan etapizat', href: 'recuperare-post-traumatica.html' },
+      { num: '4', image: 'img/service-4.jpg', imageAlt: 'Kinetoterapie pediatrică', name: 'Kinetoterapie', italic: 'Pediatrică', copy: 'Pentru bebeluși, copii și adolescenți: postură, scolioze, dezvoltare motrică și lucru adaptat vârstei.', tag: 'Vojta · Bobath', stat: '0-18 ani', href: 'kinetoterapie-pediatrica.html' },
+      { num: '5', image: 'img/service-5.jpg', imageAlt: 'Recuperare sportivă', name: 'Recuperare', italic: 'Sportivă', copy: 'Programe return-to-play pentru sportivi amatori și profesioniști, cu accent pe prevenția recidivelor.', tag: 'Performanță · Prevenție', stat: 'Return-to-play', href: 'recuperare-sportiva.html' },
+      { num: '6', image: 'img/service-6.jpg', imageAlt: 'Terapia durerii cronice', name: 'Terapia', italic: 'Durerii Cronice', copy: 'Durere de spate, cervicalgie, hernie de disc și fibromialgie, abordate prin plan progresiv și măsurabil.', tag: 'Abordare integrativă', stat: '16 ședințe medii', href: 'kinetoterapie-durere-cronica.html' }
     ];
     const serviceRoot = document.querySelector('[data-services-section]');
     if (serviceRoot) {
@@ -243,8 +243,9 @@ document.addEventListener('DOMContentLoaded', () => {
         serviceRoot.querySelector('[data-service-tag]').textContent = item.tag;
         serviceRoot.querySelector('[data-service-stat]').textContent = item.stat;
         serviceRoot.querySelector('[data-service-link]').setAttribute('href', item.href);
-        const icon = serviceRoot.querySelector('[data-service-icon]');
-        icon.className = `s3-icon ${item.icon}`;
+        const image = serviceRoot.querySelector('[data-service-image]');
+        image.setAttribute('src', item.image);
+        image.setAttribute('alt', item.imageAlt);
         serviceRoot.querySelector('[data-service-pager]').textContent = `${item.num} / 6`;
         serviceRoot.querySelectorAll('[data-service]').forEach(btn => {
           btn.classList.toggle('is-active', Number(btn.dataset.service) === active);
