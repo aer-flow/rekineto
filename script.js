@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { num: '1', image: 'img/service-1.jpg', imageAlt: 'Kinetoterapie ortopedică', name: 'Kinetoterapie', italic: 'Ortopedică', copy: 'Recuperare post-operator, fracturi, entorse, luxații. Evaluare biomecanică completă, plan construit pe obiective măsurabile, ședințe 1-on-1 și ajustări săptămânale.', tag: 'Genunchi · Șold · Umăr', stat: '~12 ședințe medii', href: 'kinetoterapie-ortopedica.html' },
       { num: '2', image: 'img/service-2.jpg', imageAlt: 'Kinetoterapie neurologică', name: 'Kinetoterapie', italic: 'Neurologică', copy: 'Post-AVC, Parkinson, scleroză multiplă, neuropatii. Lucrăm pe mobilitate, echilibru și autonomie, cu progres urmărit săptămânal.', tag: 'Mobilitate · Echilibru', stat: '8+ ani specializare', href: 'kinetoterapie-neurologica.html' },
       { num: '3', image: 'img/service-3.jpg', imageAlt: 'Recuperare post-traumatică', name: 'Recuperare', italic: 'Post-Traumatică', copy: 'Programe complete după accidente, create pentru a reconstrui forța, mobilitatea și încrederea în mișcare.', tag: 'Forță · Mobilitate', stat: 'Plan etapizat', href: 'recuperare-post-traumatica.html' },
-      { num: '4', image: 'img/service-4.jpg', imageAlt: 'Kinetoterapie pediatrică', name: 'Kinetoterapie', italic: 'Pediatrică', copy: 'Pentru bebeluși, copii și adolescenți: postură, scolioze, dezvoltare motrică și lucru adaptat vârstei.', tag: 'Vojta · Bobath', stat: '0-18 ani', href: 'kinetoterapie-pediatrica.html' },
+      { num: '4', image: 'img/service-4.jpg', imageAlt: 'Kinetoterapie pediatrică', name: 'Kinetoterapie', italic: 'Pediatrică', copy: 'Pentru bebeluși, copii și adolescenți: postură, scolioze, dezvoltare motrică și lucru adaptat vârstei.', tag: 'Postură · Motricitate', stat: '0-18 ani', href: 'kinetoterapie-pediatrica.html' },
       { num: '5', image: 'img/service-5.jpg', imageAlt: 'Recuperare sportivă', name: 'Recuperare', italic: 'Sportivă', copy: 'Programe return-to-play pentru sportivi amatori și profesioniști, cu accent pe prevenția recidivelor.', tag: 'Performanță · Prevenție', stat: 'Return-to-play', href: 'recuperare-sportiva.html' },
       { num: '6', image: 'img/service-6.jpg', imageAlt: 'Terapia durerii cronice', name: 'Terapia', italic: 'Durerii Cronice', copy: 'Durere de spate, cervicalgie, hernie de disc și fibromialgie, abordate prin plan progresiv și măsurabil.', tag: 'Abordare integrativă', stat: '16 ședințe medii', href: 'kinetoterapie-durere-cronica.html' }
     ];
@@ -262,9 +262,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const zones = [
       { idx: '1', name: 'Gât', italic: '& Cervical', zone: 'Cervical', conds: 'Cervicalgie, hernie disc cervicală, dureri de cap, torticolis' },
-      { idx: '2', name: 'Umăr', italic: '& Cot', zone: 'Membru superior', conds: 'Capsulită, rupturi de coif, tendinită, sindrom de tunel carpian' },
+      { idx: '2', name: 'Umăr', italic: '& Braț', zone: 'Membre superioare', conds: 'Capsulită, rupturi de coif, tendinită, sindrom de tunel carpian' },
       { idx: '3', name: 'Spate', italic: '& Coloană', zone: 'Toracic + Lombar', conds: 'Lombalgie, hernie de disc, sciatică, scolioză, spondiloză' },
-      { idx: '4', name: 'Genunchi', italic: '& Șold', zone: 'Membru inferior', conds: 'Recuperare post-operator, artroză, ligament încrucișat, leziuni de menisc' },
+      { idx: '4', name: 'Genunchi', italic: '& Șold', zone: 'Membre inferioare', conds: 'Recuperare post-operator, artroză, ligament încrucișat, leziuni de menisc' },
       { idx: '5', name: 'Gleznă', italic: '& Picior', zone: 'Distal', conds: 'Entorse, fasciită plantară, tendinită Ahile, picior plat' },
       { idx: '6', name: 'Sistem', italic: 'Neurologic', zone: 'SNC + SNP', conds: 'Post-AVC, Parkinson, scleroză multiplă, paralizie facială' }
     ];

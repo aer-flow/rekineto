@@ -1622,3 +1622,31 @@ p { color: var(--ink-soft); line-height: 1.65; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Mobile refinements for hero framing and booking service choices. */
+@media (max-width: 768px) {
+  .hero-bg img { object-position: 58% center; }
+  .service-pills {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+  }
+  .service-pill {
+    width: 100%;
+    min-height: 52px;
+    padding: 12px 14px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.15;
+  }
+  .service-pill[data-service="ortopedica"],
+  .service-pill[data-service="neurologica"] { grid-column: 1 / -1; }
+}
+@media (max-width: 420px) {
+  .hero-bg img { object-position: 62% center; }
+}
+
