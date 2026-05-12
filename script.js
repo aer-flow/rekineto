@@ -223,12 +223,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // ====================
   function initShowcaseSections() {
     const services = [
-      { num: '01', name: 'Kinetoterapie', italic: 'Ortopedică', copy: 'Recuperare post-operator, fracturi, entorse, luxații. Evaluare biomecanică completă, plan construit pe obiective măsurabile, ședințe 1-on-1 și ajustări săptămânale.', tag: 'Genunchi · Șold · Umăr', stat: '~12 ședințe medii', href: 'kinetoterapie-ortopedica.html' },
-      { num: '02', name: 'Kinetoterapie', italic: 'Neurologică', copy: 'Post-AVC, Parkinson, scleroză multiplă, neuropatii. Lucrăm pe mobilitate, echilibru și autonomie, cu progres urmărit săptămânal.', tag: 'Mobilitate · Echilibru', stat: '8+ ani specializare', href: 'kinetoterapie-neurologica.html' },
-      { num: '03', name: 'Recuperare', italic: 'Post-Traumatică', copy: 'Programe complete după accidente, create pentru a reconstrui forța, mobilitatea și încrederea în mișcare.', tag: 'Forță · Mobilitate', stat: 'Plan etapizat', href: 'recuperare-post-traumatica.html' },
-      { num: '04', name: 'Kinetoterapie', italic: 'Pediatrică', copy: 'Pentru bebeluși, copii și adolescenți: postură, scolioze, dezvoltare motrică și lucru adaptat vârstei.', tag: 'Vojta · Bobath', stat: '0-18 ani', href: 'kinetoterapie-pediatrica.html' },
-      { num: '05', name: 'Recuperare', italic: 'Sportivă', copy: 'Programe return-to-play pentru sportivi amatori și profesioniști, cu accent pe prevenția recidivelor.', tag: 'Performanță · Prevenție', stat: 'Return-to-play', href: 'recuperare-sportiva.html' },
-      { num: '06', name: 'Terapia', italic: 'Durerii Cronice', copy: 'Durere de spate, cervicalgie, hernie de disc și fibromialgie, abordate prin plan progresiv și măsurabil.', tag: 'Abordare integrativă', stat: '16 ședințe medii', href: 'kinetoterapie-durere-cronica.html' }
+      { num: '1', icon: 'service-icon-ortho', name: 'Kinetoterapie', italic: 'Ortopedică', copy: 'Recuperare post-operator, fracturi, entorse, luxații. Evaluare biomecanică completă, plan construit pe obiective măsurabile, ședințe 1-on-1 și ajustări săptămânale.', tag: 'Genunchi · Șold · Umăr', stat: '~12 ședințe medii', href: 'kinetoterapie-ortopedica.html' },
+      { num: '2', icon: 'service-icon-neuro', name: 'Kinetoterapie', italic: 'Neurologică', copy: 'Post-AVC, Parkinson, scleroză multiplă, neuropatii. Lucrăm pe mobilitate, echilibru și autonomie, cu progres urmărit săptămânal.', tag: 'Mobilitate · Echilibru', stat: '8+ ani specializare', href: 'kinetoterapie-neurologica.html' },
+      { num: '3', icon: 'service-icon-trauma', name: 'Recuperare', italic: 'Post-Traumatică', copy: 'Programe complete după accidente, create pentru a reconstrui forța, mobilitatea și încrederea în mișcare.', tag: 'Forță · Mobilitate', stat: 'Plan etapizat', href: 'recuperare-post-traumatica.html' },
+      { num: '4', icon: 'service-icon-pediatric', name: 'Kinetoterapie', italic: 'Pediatrică', copy: 'Pentru bebeluși, copii și adolescenți: postură, scolioze, dezvoltare motrică și lucru adaptat vârstei.', tag: 'Vojta · Bobath', stat: '0-18 ani', href: 'kinetoterapie-pediatrica.html' },
+      { num: '5', icon: 'service-icon-sport', name: 'Recuperare', italic: 'Sportivă', copy: 'Programe return-to-play pentru sportivi amatori și profesioniști, cu accent pe prevenția recidivelor.', tag: 'Performanță · Prevenție', stat: 'Return-to-play', href: 'recuperare-sportiva.html' },
+      { num: '6', icon: 'service-icon-pain', name: 'Terapia', italic: 'Durerii Cronice', copy: 'Durere de spate, cervicalgie, hernie de disc și fibromialgie, abordate prin plan progresiv și măsurabil.', tag: 'Abordare integrativă', stat: '16 ședințe medii', href: 'kinetoterapie-durere-cronica.html' }
     ];
     const serviceRoot = document.querySelector('[data-services-section]');
     if (serviceRoot) {
@@ -243,7 +243,9 @@ document.addEventListener('DOMContentLoaded', () => {
         serviceRoot.querySelector('[data-service-tag]').textContent = item.tag;
         serviceRoot.querySelector('[data-service-stat]').textContent = item.stat;
         serviceRoot.querySelector('[data-service-link]').setAttribute('href', item.href);
-        serviceRoot.querySelector('[data-service-pager]').textContent = `${item.num} / 06`;
+        const icon = serviceRoot.querySelector('[data-service-icon]');
+        icon.className = `s3-icon ${item.icon}`;
+        serviceRoot.querySelector('[data-service-pager]').textContent = `${item.num} / 6`;
         serviceRoot.querySelectorAll('[data-service]').forEach(btn => {
           btn.classList.toggle('is-active', Number(btn.dataset.service) === active);
         });
@@ -258,12 +260,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const zones = [
-      { idx: '01', name: 'Gât', italic: '& Cervical', zone: 'Cervical', conds: 'Cervicalgie, hernie disc cervicală, dureri de cap, torticolis' },
-      { idx: '02', name: 'Umăr', italic: '& Cot', zone: 'Membru superior', conds: 'Capsulită, rupturi de coif, tendinită, sindrom de tunel carpian' },
-      { idx: '03', name: 'Spate', italic: '& Coloană', zone: 'Toracic + Lombar', conds: 'Lombalgie, hernie de disc, sciatică, scolioză, spondiloză' },
-      { idx: '04', name: 'Genunchi', italic: '& Șold', zone: 'Membru inferior', conds: 'Recuperare post-operator, artroză, ligament încrucișat, leziuni de menisc' },
-      { idx: '05', name: 'Gleznă', italic: '& Picior', zone: 'Distal', conds: 'Entorse, fasciită plantară, tendinită Ahile, picior plat' },
-      { idx: '06', name: 'Sistem', italic: 'Neurologic', zone: 'SNC + SNP', conds: 'Post-AVC, Parkinson, scleroză multiplă, paralizie facială' }
+      { idx: '1', name: 'Gât', italic: '& Cervical', zone: 'Cervical', conds: 'Cervicalgie, hernie disc cervicală, dureri de cap, torticolis' },
+      { idx: '2', name: 'Umăr', italic: '& Cot', zone: 'Membru superior', conds: 'Capsulită, rupturi de coif, tendinită, sindrom de tunel carpian' },
+      { idx: '3', name: 'Spate', italic: '& Coloană', zone: 'Toracic + Lombar', conds: 'Lombalgie, hernie de disc, sciatică, scolioză, spondiloză' },
+      { idx: '4', name: 'Genunchi', italic: '& Șold', zone: 'Membru inferior', conds: 'Recuperare post-operator, artroză, ligament încrucișat, leziuni de menisc' },
+      { idx: '5', name: 'Gleznă', italic: '& Picior', zone: 'Distal', conds: 'Entorse, fasciită plantară, tendinită Ahile, picior plat' },
+      { idx: '6', name: 'Sistem', italic: 'Neurologic', zone: 'SNC + SNP', conds: 'Post-AVC, Parkinson, scleroză multiplă, paralizie facială' }
     ];
     const treatRoot = document.querySelector('[data-treat-section]');
     if (treatRoot) {
