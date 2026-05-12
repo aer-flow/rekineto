@@ -219,7 +219,75 @@ document.addEventListener('DOMContentLoaded', () => {
   initBooking();
 
   // ====================
-  // 6. Subpage header always solid
+  // 6. Showcase sections
+  // ====================
+  function initShowcaseSections() {
+    const services = [
+      { num: '01', name: 'Kinetoterapie', italic: 'Ortopedică', copy: 'Recuperare post-operator, fracturi, entorse, luxații. Evaluare biomecanică completă, plan construit pe obiective măsurabile, ședințe 1-on-1 și ajustări săptămânale.', tag: 'Genunchi · Șold · Umăr', stat: '~12 ședințe medii', href: 'kinetoterapie-ortopedica.html' },
+      { num: '02', name: 'Kinetoterapie', italic: 'Neurologică', copy: 'Post-AVC, Parkinson, scleroză multiplă, neuropatii. Lucrăm pe mobilitate, echilibru și autonomie, cu progres urmărit săptămânal.', tag: 'Mobilitate · Echilibru', stat: '8+ ani specializare', href: 'kinetoterapie-neurologica.html' },
+      { num: '03', name: 'Recuperare', italic: 'Post-Traumatică', copy: 'Programe complete după accidente, create pentru a reconstrui forța, mobilitatea și încrederea în mișcare.', tag: 'Forță · Mobilitate', stat: 'Plan etapizat', href: 'recuperare-post-traumatica.html' },
+      { num: '04', name: 'Kinetoterapie', italic: 'Pediatrică', copy: 'Pentru bebeluși, copii și adolescenți: postură, scolioze, dezvoltare motrică și lucru adaptat vârstei.', tag: 'Vojta · Bobath', stat: '0-18 ani', href: 'kinetoterapie-pediatrica.html' },
+      { num: '05', name: 'Recuperare', italic: 'Sportivă', copy: 'Programe return-to-play pentru sportivi amatori și profesioniști, cu accent pe prevenția recidivelor.', tag: 'Performanță · Prevenție', stat: 'Return-to-play', href: 'recuperare-sportiva.html' },
+      { num: '06', name: 'Terapia', italic: 'Durerii Cronice', copy: 'Durere de spate, cervicalgie, hernie de disc și fibromialgie, abordate prin plan progresiv și măsurabil.', tag: 'Abordare integrativă', stat: '16 ședințe medii', href: 'kinetoterapie-durere-cronica.html' }
+    ];
+    const serviceRoot = document.querySelector('[data-services-section]');
+    if (serviceRoot) {
+      let active = 0;
+      const setService = (idx) => {
+        active = (idx + services.length) % services.length;
+        const item = services[active];
+        serviceRoot.querySelector('[data-service-num]').textContent = item.num;
+        serviceRoot.querySelector('[data-service-name]').textContent = item.name;
+        serviceRoot.querySelector('[data-service-italic]').textContent = item.italic;
+        serviceRoot.querySelector('[data-service-copy]').textContent = item.copy;
+        serviceRoot.querySelector('[data-service-tag]').textContent = item.tag;
+        serviceRoot.querySelector('[data-service-stat]').textContent = item.stat;
+        serviceRoot.querySelector('[data-service-link]').setAttribute('href', item.href);
+        serviceRoot.querySelector('[data-service-pager]').textContent = `${item.num} / 06`;
+        serviceRoot.querySelectorAll('[data-service]').forEach(btn => {
+          btn.classList.toggle('is-active', Number(btn.dataset.service) === active);
+        });
+      };
+      serviceRoot.querySelectorAll('[data-service]').forEach(btn => {
+        btn.addEventListener('mouseenter', () => setService(Number(btn.dataset.service)));
+        btn.addEventListener('click', () => setService(Number(btn.dataset.service)));
+      });
+      serviceRoot.querySelectorAll('[data-service-prev]').forEach(btn => btn.addEventListener('click', () => setService(active - 1)));
+      serviceRoot.querySelectorAll('[data-service-next]').forEach(btn => btn.addEventListener('click', () => setService(active + 1)));
+      setService(active);
+    }
+
+    const zones = [
+      { idx: '01', name: 'Gât', italic: '& Cervical', zone: 'Cervical', conds: 'Cervicalgie, hernie disc cervicală, dureri de cap, torticolis' },
+      { idx: '02', name: 'Umăr', italic: '& Cot', zone: 'Membru superior', conds: 'Capsulită, rupturi de coif, tendinită, sindrom de tunel carpian' },
+      { idx: '03', name: 'Spate', italic: '& Coloană', zone: 'Toracic + Lombar', conds: 'Lombalgie, hernie de disc, sciatică, scolioză, spondiloză' },
+      { idx: '04', name: 'Genunchi', italic: '& Șold', zone: 'Membru inferior', conds: 'Recuperare post-operator, artroză, ligament încrucișat, leziuni de menisc' },
+      { idx: '05', name: 'Gleznă', italic: '& Picior', zone: 'Distal', conds: 'Entorse, fasciită plantară, tendinită Ahile, picior plat' },
+      { idx: '06', name: 'Sistem', italic: 'Neurologic', zone: 'SNC + SNP', conds: 'Post-AVC, Parkinson, scleroză multiplă, paralizie facială' }
+    ];
+    const treatRoot = document.querySelector('[data-treat-section]');
+    if (treatRoot) {
+      const setZone = (idx) => {
+        const zone = zones[idx];
+        treatRoot.querySelector('[data-zone-index]').textContent = `Zona ${zone.idx} · ${zone.zone}`;
+        treatRoot.querySelector('[data-zone-name]').textContent = zone.name;
+        treatRoot.querySelector('[data-zone-italic]').textContent = zone.italic;
+        treatRoot.querySelector('[data-zone-lede]').textContent = `${zone.conds}. Plan personalizat pe baza evaluării biomecanice, cu obiective măsurabile la fiecare etapă.`;
+        treatRoot.querySelector('[data-zone-conds]').textContent = zone.conds;
+        treatRoot.querySelectorAll('[data-zone]').forEach(btn => {
+          btn.classList.toggle('is-active', Number(btn.dataset.zone) === idx);
+        });
+      };
+      treatRoot.querySelectorAll('[data-zone]').forEach(btn => {
+        btn.addEventListener('click', () => setZone(Number(btn.dataset.zone)));
+      });
+      setZone(2);
+    }
+  }
+  initShowcaseSections();
+
+  // ====================
+  // 7. Subpage header always solid
   // ====================
   if (document.body.classList.contains('subpage-body') || document.querySelector('.subpage-hero')) {
     if (header) header.classList.add('is-subpage');

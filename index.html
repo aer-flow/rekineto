@@ -36,9 +36,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css?v=3.0.0">
+  <link rel="stylesheet" href="rekineto-sections.css?v=1.0.0">
   <link rel="icon" href="img/brand-logo.png">
   <link rel="apple-touch-icon" href="img/brand-logo.png">
 </head>
@@ -134,47 +135,52 @@
   </section>
 
   <!-- WHAT WE TREAT -->
-  <section class="treat" id="tratam">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="eyebrow">Ce tratăm</span>
-        <h2>Pentru fiecare zonă a corpului</h2>
-        <p>Lucrăm cu cele mai frecvente afecțiuni musculo-scheletale și neurologice.</p>
-      </div>
-      <div class="treat-layout">
-        <div class="treat-figure reveal">
-          <img src="img/treat-anatomy.jpg" alt="Corp uman, zone tratate">
+  <section class="rk-section" id="tratam">
+    <div class="rk-inner">
+      <div class="rk-head reveal">
+        <div>
+          <div class="rk-eyebrow">Ce tratăm</div>
+          <h2>Pentru fiecare <em>zonă</em> a corpului</h2>
         </div>
-        <div class="treat-cards reveal delay-1">
-          <div class="treat-card">
-            <div class="treat-card-icon"><i class="fa-solid fa-head-side-cough"></i></div>
-            <h4>Gât &amp; Cervical</h4>
-            <p>Cervicalgie, hernie disc cervicală, dureri de cap, torticolis</p>
+        <div class="rk-head-right">Alege o zonă și vezi afecțiunile tratate, durata medie și formatul ședințelor.</div>
+      </div>
+      <div class="c1-wrap reveal" data-treat-section>
+        <div class="c1-figure">
+          <svg viewBox="0 0 100 200" fill="none" stroke="currentColor" stroke-width="1.2" class="body" aria-hidden="true">
+            <circle cx="50" cy="14" r="9"></circle>
+            <path d="M46 23 L46 28 M54 23 L54 28"></path>
+            <path d="M30 30 Q35 28 50 28 Q65 28 70 30 L72 70 Q72 78 65 82 L60 90 L40 90 L35 82 Q28 78 28 70 Z"></path>
+            <path d="M30 32 Q22 45 22 60 Q22 75 26 88"></path>
+            <path d="M70 32 Q78 45 78 60 Q78 75 74 88"></path>
+            <path d="M40 90 L36 110 M60 90 L64 110"></path>
+            <path d="M36 110 L34 150 L33 180 L38 180 L40 150"></path>
+            <path d="M64 110 L66 150 L67 180 L62 180 L60 150"></path>
+            <path d="M33 180 L29 184 L38 184"></path>
+            <path d="M67 180 L71 184 L62 184"></path>
+          </svg>
+          <button type="button" class="hot" style="top:18%;left:50%" data-zone="0">01</button>
+          <button type="button" class="hot" style="top:30%;left:32%" data-zone="1">02</button>
+          <button type="button" class="hot is-active" style="top:42%;left:50%" data-zone="2">03</button>
+          <button type="button" class="hot" style="top:64%;left:50%" data-zone="3">04</button>
+          <button type="button" class="hot" style="top:88%;left:50%" data-zone="4">05</button>
+          <button type="button" class="hot" style="top:8%;left:50%" data-zone="5">06</button>
+        </div>
+        <div class="c1-side">
+          <div class="index" data-zone-index>Zona 03 · Toracic + Lombar</div>
+          <h3><span data-zone-name>Spate</span> <em data-zone-italic>&amp; Coloană</em></h3>
+          <div class="lede" data-zone-lede>Lombalgie, hernie de disc, sciatică, scolioză, spondiloză. Plan personalizat pe baza evaluării biomecanice, cu obiective măsurabile la fiecare etapă.</div>
+          <div class="cond">
+            <div><span class="lbl">Afecțiuni</span><span data-zone-conds>Lombalgie, hernie de disc, sciatică, scolioză, spondiloză</span></div>
+            <div><span class="lbl">Durată</span><span>8-16 ședințe în medie</span></div>
+            <div><span class="lbl">Format</span><span>1-on-1, 45-50 min, ajustat săptămânal</span></div>
           </div>
-          <div class="treat-card">
-            <div class="treat-card-icon"><i class="fa-solid fa-bullseye"></i></div>
-            <h4>Spate &amp; Coloană</h4>
-            <p>Lombalgie, hernie de disc, sciatică, scolioză, spondiloză</p>
-          </div>
-          <div class="treat-card">
-            <div class="treat-card-icon"><i class="fa-solid fa-hand"></i></div>
-            <h4>Umăr &amp; Cot</h4>
-            <p>Capsulită, rupturi de coif, tendinită, sindrom de tunel carpian</p>
-          </div>
-          <div class="treat-card">
-            <div class="treat-card-icon"><i class="fa-solid fa-bone"></i></div>
-            <h4>Genunchi &amp; Șold</h4>
-            <p>Recuperare post-operator, artroză, ligament încrucișat, leziuni de menisc</p>
-          </div>
-          <div class="treat-card">
-            <div class="treat-card-icon"><i class="fa-solid fa-shoe-prints"></i></div>
-            <h4>Gleznă &amp; Picior</h4>
-            <p>Entorse, fasciită plantară, tendinită Ahile, picior plat</p>
-          </div>
-          <div class="treat-card">
-            <div class="treat-card-icon"><i class="fa-solid fa-brain"></i></div>
-            <h4>Neurologic</h4>
-            <p>Post-AVC, Parkinson, scleroză multiplă, paralizie facială</p>
+          <div class="mini-nav">
+            <button type="button" data-zone="0">01 · Gât</button>
+            <button type="button" data-zone="1">02 · Umăr</button>
+            <button type="button" class="is-active" data-zone="2">03 · Spate</button>
+            <button type="button" data-zone="3">04 · Genunchi</button>
+            <button type="button" data-zone="4">05 · Gleznă</button>
+            <button type="button" data-zone="5">06 · Sistem</button>
           </div>
         </div>
       </div>
@@ -182,56 +188,50 @@
   </section>
 
   <!-- SERVICES -->
-  <section class="services" id="servicii">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="eyebrow">Programe specializate</span>
-        <h2>Cele 6 programe principale</h2>
-        <p>Fiecare program e construit pe baza unei evaluări individuale, cu obiective măsurabile.</p>
+  <section class="rk-section cream" id="servicii">
+    <div class="rk-inner">
+      <div class="rk-head reveal">
+        <div>
+          <div class="rk-eyebrow">Servicii</div>
+          <h2>Un <em>program</em>, o scenă</h2>
+        </div>
+        <div class="rk-head-right">Programe construite în jurul tău, nu invers. Fiecare include evaluare biomecanică, plan personalizat și ajustări săptămânale.</div>
       </div>
-      <div class="svc-grid">
-        <a href="kinetoterapie-ortopedica.html" class="svc-card reveal">
-          <span class="svc-num">01</span>
-          <div class="svc-icon"><i class="fa-solid fa-bone"></i></div>
-          <h3>Kinetoterapie Ortopedică</h3>
-          <p>Recuperare post-operatorie, fracturi, entorse, luxații. Programe pentru genunchi, șold, umăr, coloană.</p>
-          <span class="svc-link">Detalii <i class="fa-solid fa-arrow-right"></i></span>
-        </a>
-        <a href="kinetoterapie-neurologica.html" class="svc-card reveal delay-1">
-          <span class="svc-num">02</span>
-          <div class="svc-icon"><i class="fa-solid fa-brain"></i></div>
-          <h3>Kinetoterapie Neurologică</h3>
-          <p>Recuperare post-AVC, Parkinson, scleroză multiplă, neuropatii. Restabilim mobilitatea și echilibrul.</p>
-          <span class="svc-link">Detalii <i class="fa-solid fa-arrow-right"></i></span>
-        </a>
-        <a href="recuperare-post-traumatica.html" class="svc-card reveal delay-2">
-          <span class="svc-num">03</span>
-          <div class="svc-icon"><i class="fa-solid fa-hand-holding-medical"></i></div>
-          <h3>Recuperare Post-Traumatică</h3>
-          <p>Programe complete după accidente — refacem forța, mobilitatea și încrederea în mișcare.</p>
-          <span class="svc-link">Detalii <i class="fa-solid fa-arrow-right"></i></span>
-        </a>
-        <a href="kinetoterapie-pediatrica.html" class="svc-card reveal">
-          <span class="svc-num">04</span>
-          <div class="svc-icon"><i class="fa-solid fa-child-reaching"></i></div>
-          <h3>Kinetoterapie Pediatrică</h3>
-          <p>Pentru bebeluși, copii și adolescenți — corecții posturale, scolioze, întârzieri motorii.</p>
-          <span class="svc-link">Detalii <i class="fa-solid fa-arrow-right"></i></span>
-        </a>
-        <a href="recuperare-sportiva.html" class="svc-card reveal delay-1">
-          <span class="svc-num">05</span>
-          <div class="svc-icon"><i class="fa-solid fa-person-running"></i></div>
-          <h3>Recuperare Sportivă</h3>
-          <p>Programe pentru sportivi — recuperare după accidentări, prevenție, optimizare a performanței.</p>
-          <span class="svc-link">Detalii <i class="fa-solid fa-arrow-right"></i></span>
-        </a>
-        <a href="kinetoterapie-durere-cronica.html" class="svc-card reveal delay-2">
-          <span class="svc-num">06</span>
-          <div class="svc-icon"><i class="fa-solid fa-bolt"></i></div>
-          <h3>Terapia Durerii Cronice</h3>
-          <p>Durere de spate, cervicalgie, hernie de disc, fibromialgie — abordare integrativă pentru ameliorare.</p>
-          <span class="svc-link">Detalii <i class="fa-solid fa-arrow-right"></i></span>
-        </a>
+      <div class="s3 reveal" data-services-section>
+        <div class="s3-bg"></div>
+        <div class="s3-content">
+          <div class="s3-left">
+            <div>
+              <div class="s3-num" data-service-num>01</div>
+              <h3><span data-service-name>Kinetoterapie</span><br><em data-service-italic>Ortopedică</em></h3>
+            </div>
+            <div>
+              <p data-service-copy>Recuperare post-operator, fracturi, entorse, luxații. Evaluare biomecanică completă, plan construit pe obiective măsurabile, ședințe 1-on-1 și ajustări săptămânale.</p>
+              <div class="s3-pills">
+                <span data-service-tag>Genunchi · Șold · Umăr</span>
+                <span data-service-stat>~12 ședințe medii</span>
+              </div>
+              <a class="s3-cta" data-service-link href="kinetoterapie-ortopedica.html">Vezi detalii <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="s3-right">
+            <button type="button" class="s3-tab is-active" data-service="0"><span class="t">Ortopedică</span><span class="n">01</span></button>
+            <button type="button" class="s3-tab" data-service="1"><span class="t">Neurologică</span><span class="n">02</span></button>
+            <button type="button" class="s3-tab" data-service="2"><span class="t">Post-Traumatică</span><span class="n">03</span></button>
+            <button type="button" class="s3-tab" data-service="3"><span class="t">Pediatrică</span><span class="n">04</span></button>
+            <button type="button" class="s3-tab" data-service="4"><span class="t">Sportivă</span><span class="n">05</span></button>
+            <button type="button" class="s3-tab" data-service="5"><span class="t">Durerii Cronice</span><span class="n">06</span></button>
+          </div>
+        </div>
+        <div class="s3-mobile-pager">
+          <button type="button" data-service-prev>← Anterior</button>
+          <span data-service-pager>01 / 06</span>
+          <button type="button" data-service-next>Următorul →</button>
+        </div>
+        <div class="s3-nav">
+          <button type="button" data-service-prev aria-label="Anterior">‹</button>
+          <button type="button" data-service-next aria-label="Următorul">›</button>
+        </div>
       </div>
     </div>
   </section>
@@ -363,58 +363,42 @@
   </section>
 
   <!-- TEAM -->
-  <section class="team" id="echipa">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="eyebrow">Echipa</span>
-        <h2>Specialiști care înțeleg ce e durerea</h2>
-        <p>Kinetoterapeuți cu specializări multiple și pasiune pentru fiecare pacient.</p>
+  <section class="rk-section" id="echipa">
+    <div class="rk-inner">
+      <div class="rk-head reveal">
+        <div>
+          <div class="rk-eyebrow">Echipa</div>
+          <h2>Trei specialiști, <em>trei dosare</em></h2>
+        </div>
+        <div class="rk-head-right">Oameni care înțeleg ce e durerea și cum o transformi în mișcare. Atenție 1-on-1, evaluare obiectivă, plan adaptat ție.</div>
       </div>
-      <div class="team-grid">
-        <article class="team-card reveal">
-          <div class="team-photo">
-            <img src="img/team-1.jpg" alt="Kinetoterapeut Principal">
-          </div>
-          <div class="team-info">
-            <h3 class="team-name">Dr. Andrei Popescu</h3>
-            <span class="team-role">Kinetoterapeut Principal</span>
-            <p class="team-bio">12 ani experiență. Specializat în recuperare ortopedică și post-operatorie.</p>
-            <div class="team-specs">
-              <span class="team-spec">Ortopedie</span>
-              <span class="team-spec">Post-operator</span>
-              <span class="team-spec">Sport</span>
-            </div>
-          </div>
+      <div class="t2-grid reveal">
+        <article class="t2-cell">
+          <div class="top"><span>Dosar 01</span><span class="num">12</span></div>
+          <h3>Andrei<span class="last">Popescu</span></h3>
+          <div class="role">Kinetoterapeut Principal</div>
+          <div class="photo"><img src="img/team-1.jpg" alt="Andrei Popescu"></div>
+          <div class="bio">„Recuperarea nu e despre durere, e despre încrederea că poți să te miști din nou.”</div>
+          <div class="tags"><span>Ortopedie</span><span>Post-operator</span><span>Sport</span></div>
+          <div class="t2-foot"><span>320+ cazuri</span><a href="#programare">Programează →</a></div>
         </article>
-        <article class="team-card reveal delay-1">
-          <div class="team-photo">
-            <img src="img/team-2.jpg" alt="Kinetoterapeut Neurologie">
-          </div>
-          <div class="team-info">
-            <h3 class="team-name">Maria Ionescu</h3>
-            <span class="team-role">Kinetoterapeut Neurologie</span>
-            <p class="team-bio">8 ani experiență. Specializată în recuperare post-AVC și afecțiuni neurologice.</p>
-            <div class="team-specs">
-              <span class="team-spec">Post-AVC</span>
-              <span class="team-spec">Parkinson</span>
-              <span class="team-spec">Bobath</span>
-            </div>
-          </div>
+        <article class="t2-cell">
+          <div class="top"><span>Dosar 02</span><span class="num">8</span></div>
+          <h3>Maria<span class="last">Ionescu</span></h3>
+          <div class="role">Kinetoterapeut Neurologie</div>
+          <div class="photo"><img src="img/team-2.jpg" alt="Maria Ionescu"></div>
+          <div class="bio">„Fiecare pas mic înseamnă mult. Lucrăm cu răbdare și măsurăm progresul.”</div>
+          <div class="tags"><span>Post-AVC</span><span>Parkinson</span><span>Bobath</span></div>
+          <div class="t2-foot"><span>180+ cazuri</span><a href="#programare">Programează →</a></div>
         </article>
-        <article class="team-card reveal delay-2">
-          <div class="team-photo">
-            <img src="img/team-3.jpg" alt="Kinetoterapeut Pediatrie">
-          </div>
-          <div class="team-info">
-            <h3 class="team-name">Alexandru Marin</h3>
-            <span class="team-role">Kinetoterapeut Pediatrie</span>
-            <p class="team-bio">7 ani experiență. Lucrează cu copii și adolescenți, specializare în corecții posturale.</p>
-            <div class="team-specs">
-              <span class="team-spec">Pediatrie</span>
-              <span class="team-spec">Scolioze</span>
-              <span class="team-spec">Vojta</span>
-            </div>
-          </div>
+        <article class="t2-cell">
+          <div class="top"><span>Dosar 03</span><span class="num">7</span></div>
+          <h3>Alexandru<span class="last">Marin</span></h3>
+          <div class="role">Kinetoterapeut Pediatrie</div>
+          <div class="photo"><img src="img/team-3.jpg" alt="Alexandru Marin"></div>
+          <div class="bio">„Cu copiii nu poți să te grăbești. Faci kineto să pară joc și funcționează.”</div>
+          <div class="tags"><span>Pediatrie</span><span>Scolioze</span><span>Vojta</span></div>
+          <div class="t2-foot"><span>240+ cazuri</span><a href="#programare">Programează →</a></div>
         </article>
       </div>
     </div>
